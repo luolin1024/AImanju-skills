@@ -8,6 +8,7 @@ AI 漫剧/短剧创作技能合集，转个人 skill 的备料库。
 |---|---|---|
 | `skills/short-drama*`（12 个） | [zenstory-ai/drama-skills](https://github.com/zenstory-ai/drama-skills) 快照 | MIT（见 `LICENSE`，二次分发须保留） |
 | `skills/duanju-pipeline` | 本地自建全链路管线 | 自有 |
+| `skills/manju-*`（3 个，2026-11-17） | 本地自建：拆解提炼/换皮编剧/密度压缩 | 自有 |
 
 快照日期：2026-11-16。上游更新：重新 clone 后覆盖 `skills/short-drama*`。
 
@@ -29,6 +30,10 @@ AImanju-skills/
         ├── short-drama-edit         # 剪辑成片(需 ffmpeg)
         ├── short-drama-review       # 审查
         ├── short-drama-develop / short-drama-novel-analyze  # 创意开发/原著拆解
+    └── manju-*/                  # 【创作层】本地自建 3 技能，衔接拆解与制作链
+        ├── manju-formula         #   拆解→500字总结+最小可抄骨架+结构化公式
+        ├── manju-screenplay      #   公式→换皮映射+集数决策+全剧剧本初稿
+        └── manju-density         #   剧本信息密度压缩(审计+六手法+指标复检)
 ```
 
 `duanju-pipeline` 补上游缺口：爆款检索、核心思路层拆解、去小说化硬校验、数据复盘闭环。制作知识单一来源在上游 12 技能，编排层不重复实现。
